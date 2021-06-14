@@ -1,4 +1,4 @@
-{% set version = '0.11.33' %}
+{% set version = "0.11.42" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/susieR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/susieR/susieR_{{ version }}.tar.gz
-  sha256: ed8b20ef873a528e299d5e00bf20d2453a03e5bbf82f928ec85a4abc961cfb80
+  sha256: d09f1ba8026db07f6ce9b1d61234ac889fc95fd9fa043c5b5d6288133d98b9f4
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -45,18 +45,12 @@ test:
 about:
   home: https://github.com/stephenslab/susieR
   license: MIT
-  summary: Implements methods for variable selection in linear regression based on the "Sum of
-    Single Effects" (SuSiE) model, as described in Wang et al (2020) <DOI:10.1101/501114>.
-    These methods provide simple summaries, called "Credible Sets", for accurately quantifying
-    uncertainty in which variables should be selected. The methods are motivated by
-    genetic fine-mapping applications, and are particularly well-suited to settings
-    where variables are highly correlated and detectable effects are sparse. The fitting
-    algorithm, a Bayesian analogue of stepwise selection methods called "Iterative Bayesian
-    Stepwise Selection" (IBSS), is simple and fast, allowing the SuSiE model be fit
-    to large data sets (thousands of samples and hundreds of thousands of variables).
+  summary: Implements methods for variable selection in linear regression based on the "Sum of Single Effects" (SuSiE) model, as described in Wang et al (2020) <DOI:10.1101/501114>. These methods provide simple summaries, called "Credible Sets", for accurately quantifying uncertainty in which variables should be selected.
+    The methods are motivated by genetic fine-mapping applications, and are particularly well-suited to settings where variables are highly correlated and detectable effects are sparse. The fitting algorithm, a Bayesian analogue of stepwise selection methods called "Iterative Bayesian Stepwise Selection" (IBSS), is simple
+    and fast, allowing the SuSiE model be fit to large data sets (thousands of samples and hundreds of thousands of variables).
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
