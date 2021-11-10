@@ -1,4 +1,4 @@
-{% set version = "0.11.42" %}
+{% set version = "0.11.84" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/susieR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/susieR/susieR_{{ version }}.tar.gz
-  sha256: d09f1ba8026db07f6ce9b1d61234ac889fc95fd9fa043c5b5d6288133d98b9f4
+  sha256: 9f26b9b662d85a8f9ba0ae6fa65fd38651d28cb1dab6c320ea80069f6fe7595a
 
 build:
   merge_build_host: true  # [win]
