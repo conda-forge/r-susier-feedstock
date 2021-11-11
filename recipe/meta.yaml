@@ -27,13 +27,17 @@ requirements:
   host:
     - r-base
     - r-matrix
+    - r-crayon
     - r-ggplot2
+    - r-matrixstats
     - r-mixsqp
     - r-reshape
   run:
     - r-base
     - r-matrix
+    - r-crayon
     - r-ggplot2
+    - r-matrixstats
     - r-mixsqp
     - r-reshape
 
