@@ -1,4 +1,4 @@
-{% set version = "0.14.1" %}
+{% set version = "0.14.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/susieR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/susieR/susieR_{{ version }}.tar.gz
-  sha256: 8608412e3313f8908466662c5900b7915f73f40e37362ce77edc4b219e8bd9fc
+  sha256: ba02322eb1f7a7cc024c9278aa7903a34d8ad5d6f3b12c168374bc6214ed2c6e
 
 build:
   number: 0
